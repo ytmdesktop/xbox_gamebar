@@ -1,12 +1,12 @@
 ﻿<Page
-    x:Class="WidgetYTMDesktop.Widget1"
+    x:Class="YouTubeMusicDesktopWidget.Widget1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:WidgetYTMDesktop"
+    xmlns:local="using:YouTubeMusicDesktopWidget"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="#222"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Width="410" 
     Height="130">
 
@@ -71,7 +71,7 @@
         </Style>
     </Page.Resources>
 
-    <StackPanel Orientation="Horizontal" Padding="3">
+    <StackPanel Orientation="Horizontal" Padding="3" Background="#222">
         <StackPanel BorderBrush="#666" Width="auto" Height="auto" Background="#333">
             <Image x:Name="coverImage" Width="124" Height="124"></Image>
         </StackPanel>

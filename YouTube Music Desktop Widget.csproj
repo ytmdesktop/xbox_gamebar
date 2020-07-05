@@ -7,8 +7,8 @@
     <ProjectGuid>{A2181EB4-E748-433B-96C1-8223B2A9EF18}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WidgetAdvSampleCS</RootNamespace>
-    <AssemblyName>WidgetAdvSampleCS</AssemblyName>
+    <RootNamespace>YouTubeMusicDesktopWidget</RootNamespace>
+    <AssemblyName>YouTubeMusicDesktopWidget</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
@@ -106,9 +106,6 @@
     </Compile>
     <Compile Include="Models\PlayerInfo.cs" />
     <Compile Include="Models\TrackInfo.cs" />
-    <Compile Include="Widget1Settings.xaml.cs">
-      <DependentUpon>Widget1Settings.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -189,10 +186,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Widget1Settings.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -215,9 +208,6 @@
     <PackageReference Include="SocketIoClientDotNet">
       <Version>0.9.13</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="WidgetYTMDesktop_TemporaryKey.pfx" />
   </ItemGroup>
   <PropertyGroup>
     <XboxGameBar-Platform Condition="'$(Platform)' == 'x86'">win32</XboxGameBar-Platform>

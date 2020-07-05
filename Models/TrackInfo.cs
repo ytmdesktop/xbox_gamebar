@@ -9,7 +9,7 @@ using System.Runtime.Serialization.Json;
 
 using Newtonsoft.Json.Linq;
 
-namespace WidgetYTMDesktop.Models
+namespace YouTubeMusicDesktopWidget.Models
 {
     class TrackInfo
     {

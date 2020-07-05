@@ -8,14 +8,14 @@
   IgnorableNamespaces="uap uap3 mp">
 
   <Identity
-    Name="WidgetYTMDesktop"
+    Name="YouTubeMusicDesktopWidget"
     Publisher="CN=Adler Luiz"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="4b9dee15-da50-4b0a-8337-9b84da542023" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>WidgetYTMDesktop</DisplayName>
+    <DisplayName>YouTube Music Desktop Game Bar Overlay</DisplayName>
     <PublisherDisplayName>Adler Luiz</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -31,91 +31,38 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="WidgetYTMDesktop.App">
+      EntryPoint="YouTubeMusicDesktopWidget.App">
       <uap:VisualElements
-        DisplayName="WidgetYTMDesktop"
+        DisplayName="YouTube Music Desktop Game Bar Overlay"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Widget for YouTube Music Desktop app"
+        Description="Xbox Game Bar Widget for YouTube Music Desktop"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
       </uap:VisualElements>
       <Extensions>
         <uap3:Extension Category="windows.appExtension">
           <uap3:AppExtension Name="microsoft.gameBarUIExtension"
-                             Id="Widget1"
-                             DisplayName="YouTube Music"
-                             Description="Widget for YouTube Music Desktop App"
+                             Id="YouTubeMusicDesktopWidget"
+                             DisplayName="YouTube Music Desktop"
+                             Description="Xbox Game Bar Widget for YouTube Music Desktop"
                              PublicFolder="GameBar">
             <uap3:Properties>
               <GameBarWidget Type="Standard">
                 <HomeMenuVisible>true</HomeMenuVisible>
                 <PinningSupported>true</PinningSupported>
-                <SettingsSupported AppExtensionId="Widget1Settings" />
-                <ActivateAfterInstall>true</ActivateAfterInstall>
+                <ActivateAfterInstall>false</ActivateAfterInstall>
                 <Window>
                   <Size>
-                    <Height>625</Height>
-                    <Width>600</Width>
-                    <MinHeight>500</MinHeight>
-                    <MinWidth>600</MinWidth>
-                    <MaxHeight>1000</MaxHeight>
-                    <MaxWidth>1000</MaxWidth>
-                  </Size>
-                  <ResizeSupported>
-                    <Horizontal>true</Horizontal>
-                    <Vertical>true</Vertical>
-                  </ResizeSupported>
-                </Window>
-              </GameBarWidget>
-            </uap3:Properties>
-          </uap3:AppExtension>
-        </uap3:Extension>
-
-        <!-- Extension 1 Settings (Also an extension of separate type) -->
-        <uap3:Extension Category="windows.appExtension">
-          <uap3:AppExtension Name="microsoft.gameBarUIExtension"
-                             Id="Widget1Settings"
-                             DisplayName="Widget Adv Sample 1 Settings"
-                             Description="Widget Adv Sample 2 Settings Description"
-                             PublicFolder="Widget1">
-            <uap3:Properties>
-              <GameBarWidget Type="Settings">
-                <Window>
-                  <Size>
-                    <Height>300</Height>
-                    <Width>300</Width>
-                  </Size>
-                  <ResizeSupported>
-                    <Horizontal>false</Horizontal>
-                    <Vertical>false</Vertical>
-                  </ResizeSupported>
-                </Window>
-              </GameBarWidget>
-            </uap3:Properties>
-          </uap3:AppExtension>
-        </uap3:Extension>
-        
-        <!-- 2nd extension -->
-        <uap3:Extension Category="windows.appExtension">
-          <uap3:AppExtension Name="microsoft.gameBarUIExtension"
-                             Id="Widget2"
-                             DisplayName="Widget Adv Sample 2 CS"
-                             Description="Widget Adv Sample 2 CS Description"
-                             PublicFolder="Widget2">
-            <uap3:Properties>
-              <GameBarWidget Type="Standard">
-                <HomeMenuVisible>true</HomeMenuVisible>
-                <PinningSupported>false</PinningSupported>
-                <Window>
-                  <Size>
-                    <Height>200</Height>
-                    <Width>400</Width>
-                    <MinHeight>100</MinHeight>
-                    <MinWidth>175</MinWidth>
-                    <MaxHeight>200</MaxHeight>
-                    <MaxWidth>400</MaxWidth>
+                    <Height>130</Height>
+                    <Width>410</Width>
+                    <MinHeight>130</MinHeight>
+                    <MinWidth>410</MinWidth>
+                    <MaxHeight>130</MaxHeight>
+                    <MaxWidth>410</MaxWidth>
                   </Size>
                   <ResizeSupported>
                     <Horizontal>false</Horizontal>

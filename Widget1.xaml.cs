@@ -24,7 +24,7 @@ using Windows.UI.ViewManagement;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace WidgetYTMDesktop
+namespace YouTubeMusicDesktopWidget
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -52,8 +52,9 @@ namespace WidgetYTMDesktop
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            widget = e.Parameter as XboxGameBarWidget;
-            widgetControl = new XboxGameBarWidgetControl(widget);
+            //widget = e.Parameter as XboxGameBarWidget;
+            //widget.SettingsSupported = false;
+            /*widgetControl = new XboxGameBarWidgetControl(widget);
 
             // Hook up events for when the ui is updated.
             widget.SettingsClicked += Widget_SettingsClicked;
@@ -71,7 +72,7 @@ namespace WidgetYTMDesktop
 
             widget.SettingsSupported = false;
             widget.HorizontalResizeSupported = true;
-            widget.VerticalResizeSupported = true;
+            widget.VerticalResizeSupported = true;*/
 
             socket.On(Socket.EVENT_CONNECT, () =>
             {
@@ -88,8 +89,6 @@ namespace WidgetYTMDesktop
             {
                 UpdateValues(data);
             });
-
-            // System.Diagnostics.Debug.WriteLine(e);
         }
 
         private async void UpdateValues(dynamic data)
@@ -104,9 +103,6 @@ namespace WidgetYTMDesktop
                 if (lastTrackId != trackInfo.Id)
                 {
                     lastTrackId = trackInfo.Id;
-
-                    trackTitle.Text = trackInfo.Title;
-                    trackAuthor.Text = trackInfo.Author;
 
                     if (trackInfo.Cover != "")
                     {
@@ -141,6 +137,9 @@ namespace WidgetYTMDesktop
                         thumbDownButtonImage.UriSource = new Uri("ms-appx:///Assets/Icons/ic_thumb_down_outlined_white_36dp.png");
                         break;
                 }
+
+                trackTitle.Text = trackInfo.Title;
+                trackAuthor.Text = trackInfo.Author;
 
                 thumbUpButtonBg.ImageSource = thumbUpButtonImage;
                 thumbDownButtonBg.ImageSource = thumbDownButtonImage;
