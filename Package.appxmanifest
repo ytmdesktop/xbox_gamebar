@@ -42,6 +42,7 @@
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
+        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png"/>
       </uap:VisualElements>
       <Extensions>
         <uap3:Extension Category="windows.appExtension">

@@ -120,6 +120,11 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\BadgeLogo.scale-100.png" />
+    <Content Include="Assets\BadgeLogo.scale-125.png" />
+    <Content Include="Assets\BadgeLogo.scale-150.png" />
+    <Content Include="Assets\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\BadgeLogo.scale-400.png" />
     <Content Include="Assets\Icons\ic_pause_white_48dp.png" />
     <Content Include="Assets\Icons\ic_play_arrow_grey_200_36dp.png" />
     <Content Include="Assets\Icons\ic_play_arrow_white_48dp.png" />
