@@ -17,6 +17,7 @@ namespace YouTubeMusicDesktopWidget.Models
         private int _volumePercent;
         private int _seekbarCurrentPosition;
         private string _seekbarCurrentPositionHuman;
+        private float _statePercent;
         private string _likeStatus;
         private string _repeatType;
 
@@ -24,6 +25,7 @@ namespace YouTubeMusicDesktopWidget.Models
         public int VolumePercent => _volumePercent;
         public int SeekbarCurrentPosition => _seekbarCurrentPosition;
         public string SeekbarCurrentPositionHuman => _seekbarCurrentPositionHuman;
+        public float StatePercent => _statePercent;
         public string LikeStatus => _likeStatus;
         public string RepeatType => _repeatType;
 
@@ -33,6 +35,7 @@ namespace YouTubeMusicDesktopWidget.Models
             _volumePercent = 0;
             _seekbarCurrentPosition = 0;
             _seekbarCurrentPositionHuman = "0:00";
+            _statePercent = 0;
             _likeStatus = "INDIFFERENT";
             _repeatType = "";
         }
@@ -47,6 +50,7 @@ namespace YouTubeMusicDesktopWidget.Models
                 _volumePercent = parsedJson["volumePercent"];
                 _seekbarCurrentPosition = parsedJson["seekbarCurrentPosition"];
                 _seekbarCurrentPositionHuman = parsedJson["seekbarCurrentPositionHuman"];
+                _statePercent = parsedJson["statePercent"];
                 _likeStatus = parsedJson["likeStatus"];
                 _repeatType = parsedJson["repeatType"];
             }

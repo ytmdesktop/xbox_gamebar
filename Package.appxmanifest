@@ -8,15 +8,15 @@
   IgnorableNamespaces="uap uap3 mp">
 
   <Identity
-    Name="YouTubeMusicDesktopWidget"
-    Publisher="CN=Adler Luiz"
+    Name="35305adlerluiz.YouTubeMusicDesktop"
+    Publisher="CN=92FAD922-44F1-48F4-85A4-50AA55816707"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="4b9dee15-da50-4b0a-8337-9b84da542023" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="46213378-cbe6-47d1-8e18-7aa03c8cb30a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>YouTube Music Desktop Game Bar Overlay</DisplayName>
-    <PublisherDisplayName>Adler Luiz</PublisherDisplayName>
+    <DisplayName>YTMDesktop</DisplayName>
+    <PublisherDisplayName>adlerluiz</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -33,7 +33,7 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="YouTubeMusicDesktopWidget.App">
       <uap:VisualElements
-        DisplayName="YouTube Music Desktop Game Bar Overlay"
+        DisplayName="YTMDesktop"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Xbox Game Bar Widget for YouTube Music Desktop"
@@ -42,13 +42,13 @@
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
-        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png"/>
+        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badge"/>
       </uap:VisualElements>
       <Extensions>
         <uap3:Extension Category="windows.appExtension">
           <uap3:AppExtension Name="microsoft.gameBarUIExtension"
                              Id="YouTubeMusicDesktopWidget"
-                             DisplayName="YouTube Music Desktop"
+                             DisplayName="YTMDesktop"
                              Description="Xbox Game Bar Widget for YouTube Music Desktop"
                              PublicFolder="GameBar">
             <uap3:Properties>

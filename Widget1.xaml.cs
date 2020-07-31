@@ -32,7 +32,6 @@ namespace YouTubeMusicDesktopWidget
     public sealed partial class Widget1 : Page
     {
         private XboxGameBarWidget widget = null;
-        private XboxGameBarWidgetControl widgetControl = null;
 
         Socket socket = IO.Socket("http://127.0.0.1:9863");
         Models.PlayerInfo playerInfo = new Models.PlayerInfo();
@@ -42,7 +41,7 @@ namespace YouTubeMusicDesktopWidget
         BitmapImage thumbUpButtonImage = new BitmapImage();
         BitmapImage thumbDownButtonImage = new BitmapImage();
         private string lastTrackId = "";
-        private bool _isConnected = false;
+        // private bool _isConnected = false;
         private bool _canSeek = false;
 
         public Widget1()
@@ -52,36 +51,14 @@ namespace YouTubeMusicDesktopWidget
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //widget = e.Parameter as XboxGameBarWidget;
-            //widget.SettingsSupported = false;
-            /*widgetControl = new XboxGameBarWidgetControl(widget);
-
-            // Hook up events for when the ui is updated.
-            widget.SettingsClicked += Widget_SettingsClicked;
-            widget.VisibleChanged += Widget_VisibleChanged;
-            widget.WindowStateChanged += Widget_WindowStateChanged;
-            widget.GameBarDisplayModeChanged += Widget_GameBarDisplayModeChanged;
-
-            OutputVisibleState();
-            OutputWindowState();
-            OutputGameBarDisplayMode();
-
-            Size size = new Size(410, 130);
-            widget.MinWindowSize = size;
-            widget.MaxWindowSize = size;
-
-            widget.SettingsSupported = false;
-            widget.HorizontalResizeSupported = true;
-            widget.VerticalResizeSupported = true;*/
-
             socket.On(Socket.EVENT_CONNECT, () =>
             {
-                _isConnected = true;
+                // _isConnected = true;
             });
 
             socket.On(Socket.EVENT_DISCONNECT, () =>
             {
-                _isConnected = false;
+                // _isConnected = false;
                 resetValues();
             });
 
@@ -93,8 +70,6 @@ namespace YouTubeMusicDesktopWidget
 
         private async void UpdateValues(dynamic data)
         {
-            //System.Diagnostics.Debug.WriteLine(_isConnected);
-
             playerInfo.FromJson(data);
             trackInfo.FromJson(data);
 

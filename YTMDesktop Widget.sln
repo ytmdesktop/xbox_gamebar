@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTube Music Desktop Widget", "YouTube Music Desktop Widget.csproj", "{A2181EB4-E748-433B-96C1-8223B2A9EF18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTMDesktop Widget", "YTMDesktop Widget.csproj", "{A2181EB4-E748-433B-96C1-8223B2A9EF18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -19,11 +19,11 @@ namespace YouTubeMusicDesktopWidget.Models
         private string _cover;
         private int _duration;
         private string _durationHuman;
-        private float _statePercent;
         private string _url;
         private string _id;
         private bool _isVideo;
         private bool _isAdvertisement;
+        private bool _inLibrary;
 
         public string Author => _author;
         public string Title => _title;
@@ -31,11 +31,11 @@ namespace YouTubeMusicDesktopWidget.Models
         public string Cover => _cover;
         public int Duration => _duration;
         public string DurationHuman => _durationHuman;
-        public float StatePercent => _statePercent;
         public string Url => _url;
         public string Id => _id;
         public bool IsVideo => _isVideo;
         public bool IsAdvertisement => _isAdvertisement;
+        public bool InLibrary => _inLibrary;
 
         public TrackInfo()
         {
@@ -45,11 +45,11 @@ namespace YouTubeMusicDesktopWidget.Models
             _cover = "";
             _duration = 0;
             _durationHuman = "0:00";
-            _statePercent = 0;
             _url = "";
             _id = "";
             _isVideo = false;
             _isAdvertisement = false;
+            _inLibrary = false;
         }
         public void FromJson(dynamic json)
         {
@@ -64,11 +64,11 @@ namespace YouTubeMusicDesktopWidget.Models
                 _cover = parsedJson["cover"];
                 _duration = parsedJson["duration"];
                 _durationHuman = parsedJson["durationHuman"];
-                _statePercent = parsedJson["statePercent"];
                 _url = parsedJson["url"];
                 _id = parsedJson["id"];
                 _isVideo = parsedJson["isVideo"];
                 _isAdvertisement = parsedJson["isAdvertisement"];
+                _inLibrary = parsedJson["inLibrary"];
             }
             catch { }
         }
