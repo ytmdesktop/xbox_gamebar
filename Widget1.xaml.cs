@@ -62,7 +62,7 @@ namespace YouTubeMusicDesktopWidget
                 resetValues();
             });
 
-            socket.On("query", (data) =>
+            socket.On("tick", (data) =>
             {
                 UpdateValues(data);
             });
@@ -75,6 +75,7 @@ namespace YouTubeMusicDesktopWidget
 
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
+                //System.Diagnostics.Debug.WriteLine(trackInfo.Id);
                 if (lastTrackId != trackInfo.Id)
                 {
                     lastTrackId = trackInfo.Id;
